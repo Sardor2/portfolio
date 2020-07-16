@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.125rem;
+    margin:0;
+    height: 100%;
+}
+.container {
+    width: 1050px;
+    max-width: 90%;
+    margin:0 auto;
+}
+
+
+
+/*===== Typography =====*/
+/* Header */
+header {
+    color:#fff;
+    text-align: center;
+}
+.signature {
+    width: 100%;
+    max-width: 300px;
+}
+hr {
+    width: 20%;
+    border:none;
+    border-bottom: 1px solid rgba(214, 116, 25, 0.89);
+    border-width: 3px;
+}
+/* Navigation */
+nav li {
+    margin-bottom: 1em;
+}
+.nav-link {
+    color:rgb(180, 180, 180);
+}
+/* Introduction */
+.intro-title {
+    margin:1em 0;
+    font-size: 2rem;
+}
+.intro-text {
+    margin:1em 0;
+    color:rgba(255, 255, 255, 0.75);
+}
+.intro-btn {
+    padding: 1em 2em;
+    background-color: rgb(206, 70, 36);
+    border:none;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =====Layout===== */
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(../img/bg-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+/* Navigation */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(53, 48, 47,0.4);   
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+}
+ul a {
+    text-decoration: none;
+}
+
+@media (min-width:675px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    ul li {
+        margin-right: 2em;
+    }
+    .container {
+        padding:2em;
+        padding-bottom: 3em;
+    }
+    .intro-title {
+        font-size: 3rem;
+    }
+    .intro-text {
+        font-size: 1.5rem;
+    }
+    .intro div {
+        margin:3em 0 0 0;
+    }
+    .intro-btn {
+        font-size: 1.5rem;
+        margin:2em 0;
+    }
+}
