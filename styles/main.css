@@ -13,10 +13,24 @@ body {
     width: 1050px;
     max-width: 90%;
     margin:0 auto;
+    text-align: center;
 }
 
-
-
+.btn {
+    padding: 1em 2em;
+    border:none;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+hr {
+    max-width: 70px;
+    border:none;
+    border-width: 3px;
+    margin:0 auto;
+}
 /*===== Typography =====*/
 /* Header */
 header {
@@ -27,11 +41,8 @@ header {
     width: 100%;
     max-width: 300px;
 }
-hr {
-    width: 20%;
-    border:none;
-    border-bottom: 1px solid rgba(214, 116, 25, 0.89);
-    border-width: 3px;
+.intro-hr {
+    border-bottom: 3px solid rgba(214, 116, 25, 0.89);
 }
 /* Navigation */
 nav li {
@@ -50,14 +61,35 @@ nav li {
     color:rgba(255, 255, 255, 0.75);
 }
 .intro-btn {
-    padding: 1em 2em;
     background-color: rgb(206, 70, 36);
-    border:none;
-    border-radius: 50px;
-    font-size: 1rem;
-    color:#fff;
-    font-weight: bold;
-    cursor: pointer;
+}
+
+/* About me Section */
+#about-me {
+    color:rgb(223, 223, 223);
+}
+.about-title {
+    margin:0  0 1em;
+    font-size: 1.75rem;
+}
+.about-text {
+    width: 90%;
+    margin:2em auto 0;
+    color:rgba(255, 255, 255, 0.75);
+}
+.about-hr {
+    border-bottom: 3px solid rgba(233, 227, 221, 0.89);
+}
+.about-btn {
+    background-color: white;
+    color:rgb(53, 53, 53);
+    margin-top: 3em;
+    border-radius: 1100%;
+    box-shadow: 0px 2px 5px rgb(224, 224, 224);
+    padding:1em;
+}
+.arrow-down {
+    color:rgb(206, 70, 36);
 }
 
 /* =====Layout===== */
@@ -102,7 +134,7 @@ ul a {
     ul li {
         margin-right: 2em;
     }
-    .container {
+    .intro {
         padding:2em;
         padding-bottom: 3em;
     }
@@ -118,5 +150,16 @@ ul a {
     .intro-btn {
         font-size: 1.5rem;
         margin:2em 0;
+    }
+}
+
+/* About me */
+#about-me {
+    background-color:rgb(206, 70, 36);
+    padding:5em 2em;
+}
+@media (min-width:675px) {
+    .about-text {
+        width:70%;
     }
 }
