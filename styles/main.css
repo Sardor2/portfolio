@@ -8,7 +8,16 @@ body {
     font-size: 1.125rem;
     margin:0;
     height: 100%;
+    text-align: center;
 }
+h1,h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.250rem;
+}
+
 .container {
     width: 1050px;
     max-width: 90%;
@@ -66,7 +75,7 @@ nav li {
 
 /* About me Section */
 #about-me {
-    color:rgb(223, 223, 223);
+    color:rgb(238, 232, 232);
 }
 .about-title {
     margin:0  0 1em;
@@ -75,16 +84,16 @@ nav li {
 .about-text {
     width: 90%;
     margin:2em auto 0;
-    color:rgba(255, 255, 255, 0.75);
+    color:rgba(240, 231, 231, 0.75);
 }
 .about-hr {
-    border-bottom: 3px solid rgba(233, 227, 221, 0.89);
+    border-bottom: 3px solid rgba(241, 240, 238, 0.89);
 }
 .about-btn {
     background-color: white;
     color:rgb(53, 53, 53);
     margin-top: 3em;
-    border-radius: 1100%;
+    border-radius: 100%;
     box-shadow: 0px 2px 5px rgb(224, 224, 224);
     padding:1em;
 }
@@ -92,6 +101,23 @@ nav li {
     color:rgb(206, 70, 36);
 }
 
+/* Skills */
+#skills {
+    color:#212529;
+    font-weight: 500;
+}
+.skill-img {
+    width: 128px;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.skill-title {
+    font-size: 1.250rem;
+}
 /* =====Layout===== */
 
 /* Header */
@@ -161,5 +187,28 @@ ul a {
 @media (min-width:675px) {
     .about-text {
         width:70%;
+    }
+}
+
+
+/* Skills */
+#skills {
+    padding: 2em 1em;
+}
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+.skill {
+    margin:1.5em;
+}
+
+@media (min-width:675px) {
+    .container-skills {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
