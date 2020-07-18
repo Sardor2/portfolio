@@ -7,6 +7,7 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 1.125rem;
     margin:0;
+    padding:0;
     height: 100%;
     text-align: center;
 }
@@ -60,6 +61,12 @@ nav li {
 .nav-link {
     color:rgb(180, 180, 180);
 }
+.nav-link:hover,
+.nav-link:focus {
+    color:rgb(240, 233, 233)
+}
+
+
 /* Introduction */
 .intro-title {
     margin:1em 0;
@@ -103,7 +110,7 @@ nav li {
 
 /* Skills */
 #skills {
-    color:#212529;
+    color:#4d3a2f;
     font-weight: 500;
 }
 .skill-img {
@@ -133,14 +140,25 @@ header {
 nav {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
-    background-color: rgba(53, 48, 47,0.4);   
+    background-color: rgba(53, 48, 47,0.9);   
+}
+body {
+    overflow-x: hidden;
 }
 nav ul {
     display: flex;
+    position: absolute;
+    left:0;
+    top:4em;
+    background-color: rgba(53, 48, 47,0.9);  
+    width: 100%; 
+    transform: translateX(-100%);
     flex-direction: column;
     align-items: center;
     padding: 0;
+    transition: transform 0.5s ease;
 }
 nav li {
     list-style: none;
@@ -148,7 +166,25 @@ nav li {
 ul a {
     text-decoration: none;
 }
-
+.toggle-button {
+    position: absolute;
+    left:10px;
+    top:1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 20px;
+}
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.active {
+    transform: translateX(0);
+}
 @media (min-width:675px) {
     nav {
         flex-direction: row;
@@ -156,6 +192,10 @@ ul a {
     }
     nav ul {
         flex-direction: row;
+        transform: none;
+        position: static;
+        width:50%;
+        background-color: transparent;
     }
     ul li {
         margin-right: 2em;
@@ -176,6 +216,10 @@ ul a {
     .intro-btn {
         font-size: 1.5rem;
         margin:2em 0;
+    }
+
+    .toggle-button {
+        display: none;
     }
 }
 
