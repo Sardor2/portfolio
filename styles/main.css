@@ -60,6 +60,7 @@ nav li {
 }
 .nav-link {
     color:rgb(180, 180, 180);
+    width: 100%;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -89,7 +90,6 @@ nav li {
     font-size: 1.75rem;
 }
 .about-text {
-    width: 90%;
     margin:2em auto 0;
     color:rgba(240, 231, 231, 0.75);
 }
@@ -142,22 +142,23 @@ nav {
     flex-direction: column;
     position: relative;
     align-items: center;
-    background-color: rgba(53, 48, 47,0.9);   
+    background-color: rgba(53, 48, 47,1);   
 }
 body {
     overflow-x: hidden;
 }
 nav ul {
     display: flex;
+    width: 100%;
     position: absolute;
     left:0;
-    top:4em;
+    top:3.9em;
     background-color: rgba(53, 48, 47,0.9);  
-    width: 100%; 
     transform: translateX(-100%);
     flex-direction: column;
     align-items: center;
     padding: 0;
+    padding-top: 2em;
     transition: transform 0.5s ease;
 }
 nav li {
@@ -192,10 +193,13 @@ ul a {
     }
     nav ul {
         flex-direction: row;
-        transform: none;
+        justify-content: center;
         position: static;
-        width:50%;
         background-color: transparent;
+        width: 50%;
+        padding:0;
+        transform: none;
+        transition: none;
     }
     ul li {
         margin-right: 2em;
