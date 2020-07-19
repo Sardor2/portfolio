@@ -49,7 +49,7 @@ header {
 }
 .signature {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
 }
 .intro-hr {
     border-bottom: 3px solid rgba(214, 116, 25, 0.89);
@@ -150,10 +150,17 @@ body {
 nav ul {
     display: flex;
     width: 100%;
+<<<<<<< HEAD
     height: 90vh;
     position: absolute;
     left:0;
     top:3rem;
+=======
+    height: 91vh;
+    position: absolute;
+    left:0;
+    top:3em;
+>>>>>>> exp
     background-color: rgba(53, 48, 47,0.9);  
     transform: translateX(-100%);
     flex-direction: column;
@@ -168,24 +175,57 @@ nav li {
 ul a {
     text-decoration: none;
 }
+.active {
+    transform: translateX(0);
+}
 .toggle-button {
     position: absolute;
     left:10px;
     top:1.5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width:30px;
     height: 20px;
+    transition: all .5s ease-in-out;
 }
 .bar {
     height: 3px;
-    width: 100%;
+    width: 70%;
     background-color: white;
     border-radius: 10px;
+    transition: all .3s ease-in-out;
 }
-.active {
-    transform: translateX(0);
+.bar::before,
+.bar::after {
+    content: '';
+    position: absolute;
+    left:0;
+    width:70%;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.bar::before {
+    transform: translateY(-5px);
+}
+.bar::after {
+    transform: translateY(5px);
+}
+/* ANIMATION */
+.open .bar {
+    transform: translateX(-10px);
+    background: transparent;
+}
+.open .bar::before {
+    transform: rotate(45deg) translate(5px,-5px);
+}
+.open .bar::after {
+    transform: rotate(-45deg) translate(5px,5px);
+}
+.lock-scroll {
+    overflow: hidden;
 }
 @media (min-width:675px) {
     nav {
@@ -198,11 +238,13 @@ ul a {
         position: static;
         background-color: transparent;
         width: 50%;
+        height: auto;
         padding:0;
         transform: none;
         transition: none;
     }
     ul li {
+        margin: auto 0;
         margin-right: 2em;
     }
     .intro {
@@ -222,7 +264,7 @@ ul a {
         font-size: 1.5rem;
         margin:2em 0;
     }
-
+    
     .toggle-button {
         display: none;
     }
