@@ -125,6 +125,9 @@ nav li {
 .skill-title {
     font-size: 1.250rem;
 }
+/* Showcase */
+
+
 /* =====Layout===== */
 
 /* Header */
@@ -228,6 +231,9 @@ ul a {
     overflow: hidden;
 }
 @media (min-width:675px) {
+    header {
+        height: 100vh;
+    }
     nav {
         flex-direction: row;
         justify-content: space-between;
@@ -248,6 +254,7 @@ ul a {
         margin-right: 2em;
     }
     .intro {
+        margin-top: 0;
         padding:2em;
         padding-bottom: 3em;
     }
