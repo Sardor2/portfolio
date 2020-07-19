@@ -135,6 +135,10 @@ header {
     background-attachment: scroll;
     background-size: cover;
     padding-bottom: calc(10rem - 4.5rem);
+    height: 100vh;
+}
+.container-header {
+    margin-top: 5em;
 }
 /* Navigation */
 nav {
