@@ -14,6 +14,7 @@ body {
 h1,h2,h3 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.5rem;
+    color: #212529;
 }
 h3 {
     font-size: 1.250rem;
@@ -51,6 +52,9 @@ header {
     width: 100%;
     max-width: 250px;
 }
+.intro-title {
+    color: #fff;
+}
 .intro-hr {
     border-bottom: 3px solid rgba(214, 116, 25, 0.89);
 }
@@ -78,7 +82,7 @@ nav li {
     color:rgba(255, 255, 255, 0.75);
 }
 .intro-btn {
-    background-color: rgb(206, 70, 36);
+    background-color: #f4623a
 }
 
 /* About me Section */
@@ -88,6 +92,8 @@ nav li {
 .about-title {
     margin:0  0 1em;
     font-size: 1.75rem;
+    color:rgb(241, 240, 240);
+    font-weight: 400;
 }
 .about-text {
     margin:2em auto 0;
@@ -97,15 +103,18 @@ nav li {
     border-bottom: 3px solid rgba(241, 240, 238, 0.89);
 }
 .about-btn {
-    background-color: white;
+    background-color: transparent;
     color:rgb(53, 53, 53);
     margin-top: 3em;
     border-radius: 100%;
-    box-shadow: 0px 2px 5px rgb(224, 224, 224);
-    padding:1em;
+    border:1px solid white;
+    padding:.5em;
+    color:white;
 }
-.arrow-down {
-    color:rgb(206, 70, 36);
+.about-btn:hover,
+.about-btn:focus {
+    background-color: white;
+    color: #f4623a;
 }
 
 /* Skills */
@@ -128,6 +137,7 @@ nav li {
 /* Showcase */
 
 .showcase-title {
+    
     font-size: 2.5rem;
     font-weight: lighter;
 }
@@ -144,6 +154,7 @@ nav li {
 .project-img {
     width: 100%;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgb(41, 41, 41);
 }
 
 .buttons a {
@@ -304,8 +315,6 @@ ul a {
     }
     .intro {
         margin-top: 0;
-        padding:2em;
-        padding-bottom: 3em;
     }
     .intro-title {
         font-size: 3rem;
@@ -323,10 +332,14 @@ ul a {
         display: none;
     }
 }
-
+@media (min-width:775px) {
+    .intro {
+        padding:2em;
+    }
+}
 /* About me */
 #about-me {
-    background-color:rgb(206, 70, 36);
+    background-color:#f4623a;
     padding:5em 2em;
 }
 @media (min-width:675px) {
@@ -393,4 +406,82 @@ ul a {
     .project-col {
         width:45%;
     }
+}
+
+
+/* CONTACT */
+#contact {
+    background-color: #f4623a;
+    padding:2em 0;
+    color:#fff;
+}
+.contact-title {
+    color:#fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.contact-text {
+    color:rgba(218, 218, 218,0.7);
+    width: 70%;
+    margin: 1em auto;
+}
+.method p {
+    font-size: 1rem;
+    color:rgb(224, 217, 217);
+    cursor: pointer;
+}
+.method p:hover {
+    
+    text-decoration: underline;
+}
+.method a {
+    text-decoration: none;
+    color:rgb(224, 217, 217);
+}
+.method a:hover {
+   
+}
+#contact hr {
+    border-color: #fff;
+}
+
+.contact-methods {
+    margin-top:2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.method {
+    margin:1.5em auto;
+    overflow-wrap: break-word;
+}
+
+@media (min-width:675px) {
+    .contact-methods {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/* Footer */
+footer {
+    padding:2em;
+    background-color: white;
+}
+.copyright {
+    font-size: 1rem;
+    color:rgb(160, 155, 155);
+}
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+footer a {
+    outline: none !important;
 }
