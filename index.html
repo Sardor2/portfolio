@@ -6,12 +6,13 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="styles/main.css">
     </head>
 
     <body>
         <header>
-            <nav>
+            <nav data-aos="fade-down">
                 <img class="signature" src="./img/signature.png" alt="signature">
                 <a href="#" class="toggle-button">
                     <span class="bar"></span>
@@ -25,12 +26,12 @@
             </nav>
             <div class="intro container container-header">
                 <div>
-                    <h1 class="intro-title">Hello,I`m Sardor Abdurakhimov</h1>
+                    <h1 class="intro-title" data-aos="zoom-in">Hello,I`m Sardor Abdurakhimov</h1>
                     <hr class="intro-hr">
                 </div>
                 
                <div>
-                    <p class="intro-text">Passionate front-end developer</p>
+                    <p class="intro-text " data-aos="zoom-in" data-aos-delay="800">Passionate front-end developer</p>
                     <button class="btn intro-btn">Find out more</button>
                </div>
                
@@ -42,10 +43,17 @@
             <div class="container">
                 <div>
                     <h2 class="about-title">About Me</h2>
+                    <img class="my-img" src="./img/me.png" alt="my-image" data-aos="fade-in">
                     <hr class="about-hr">
                 </div>
+                
                 <div>
-                    <p class="about-text">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                    <p class="about-text" data-aos="fade-in">
+                        My name is Sardor and I`m a passionate front-end developer.In particular,
+                        I`m pretty keen on working with React.In addition,I`m also interested in back-end web development,things like Node,Mongodb 
+                        ,but for the next couple years I plan to focus on front-end part ,escpecially React.
+            
+                    </p>
                     <button class="btn about-btn"><i class="arrow-down fa-2x fal fa-arrow-down"></i></button>
                 </div>
             </div>
@@ -56,32 +64,32 @@
             <h2 class="skills-title">Skills</h2>
             <hr class="intro-hr">
             <div class="container container-skills">
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/html5.png" alt="skill-logo">
                     <h3 class="skill-title">HTML5</h3>   
                 </div>
 
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/css.png" alt="skill-logo">
                     <h3 class="skill-title">CSS3</h3>   
                 </div>
 
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/js.png" alt="skill-logo">
                     <h3 class="skill-title">Javascript(ES5,ES6)</h3>   
                 </div>
 
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/b1.png" alt="skill-logo">
                     <h3 class="skill-title">Bootstrap</h3>   
                 </div>
 
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/responsive.png" alt="skill-logo">
                     <h3 class="skill-title">Responsive Web design</h3>   
                 </div>
 
-                <div class="skill">
+                <div class="skill" data-aos="fade-in" data-aos-once="true">
                     <img class="skill-img" src="./img/react.png" alt="skill-logo">
                     <h3 class="skill-title">React</h3>   
                 </div>
@@ -94,13 +102,16 @@
             <h2 class="showcase-title">Showcase</h2>
             <hr class="intro-hr">
             <div class="container container-showcase">
-                <div class="project">
+                <div class="project" data-aos="fade-right">
                     <div class="project-col">
-                        <img class="project-img" src="./img/keeper.JPG" alt="">
+                        <img class="project-img" src="./img/keeper.JPG" alt="keeper-app">
                     </div>
                     <div class="project-col">
                         <h3 class="project-title">Keeper</h3>
-                        <p class="project-description">Quisque turpis ligula, dapibus sed mauris et, porta fermentum urna. Etiam condimentum velit magna, ut sollicitudin quam bibendum id. Praesent euismod nibh quam, eu viverra nisl semper vitae.</p>
+                        <p class="project-description">
+                            This Keeper App resembles Google`s Keeper which is used to help people to keep their 
+                            notes,ideas and etc.The app is built with <strong><em>React</em></strong> and plus has some <strong><em>Material UI</em></strong> .
+                        </p>
                         <div class="buttons">
                             <a class="goto-project-btn" href="#">View Project</a>
                             <a class="goto-code-btn" href="#">View Code</a>
@@ -108,28 +119,31 @@
                     </div>
                 </div>
                 <hr class="intro-hr">
-                <div class="project">
+                <div class="project middle-project" data-aos="fade-left">
                     <div class="project-col">
                         <img class="project-img" src="./img/pet-care.JPG" alt="">
                     </div>
                     <div class="project-col">
-                        <h3 class="project-title">Per Care</h3>
-                        <p class="project-description">Quisque turpis ligula, dapibus sed mauris et, porta fermentum urna. Etiam condimentum velit magna, ut sollicitudin quam bibendum id. Praesent euismod nibh quam, eu viverra nisl semper vitae.</p>
+                        <h3 class="project-title">Pet Care</h3>
+                        <p class="project-description">This is a static landing page for Pet Care app.The website is fully
+                            responsive.I used <em><strong>HTML,CSS and Bootstrap</strong></em> to build it.
+                        </p>
                         <div class="buttons">
                             <a class="goto-project-btn" href="#">View Project</a>
                             <a class="goto-code-btn" href="#">View Code</a>
                         </div>
                     </div>
-                    
                 </div>
                 <hr class="intro-hr">
-                <div class="project">
+                <div class="project" data-aos="fade-right">  
                     <div class="project-col">
                         <img class="project-img" src="./img/sushi.JPG" alt="">
                     </div>
                     <div class="project-col">
                         <h3 class="project-title">Sushi Parlour</h3>
-                        <p class="project-description">Quisque turpis ligula, dapibus sed mauris et, porta fermentum urna. Etiam condimentum velit magna, ut sollicitudin quam bibendum id. Praesent euismod nibh quam, eu viverra nisl semper vitae.</p>
+                        <p class="project-description">This project of mine is like the above.It is a responsive landing page for a sushi Restaurant.
+                            The design I took from a free psd template and developed its web page using <em><strong>HTML,CSS and Bootstrap.</strong></em>
+                        </p>
                         <div class="buttons">
                             <a class="goto-project-btn" href="#">View Project</a>
                             <a class="goto-code-btn" href="#">View Code</a>
@@ -146,21 +160,21 @@
                 <div class="contact-intro">
                     <h2 class="contact-title">Let`s get In touch</h2>
                     <hr class="intro-hr">
-                    <p class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam ducimus dolor </p>    
+                    <p class="contact-text">If you would like to hire me or work with me,then feel free to contact me with any of the following methods.</p>    
                 </div>
                 <div class="contact-methods">
                     <div class="method">
-                        <span><i class="fa-3x fas fa-phone"></i></span>
+                        <span data-aos="fade-in"><i class="fa-3x fas fa-phone"></i></span>
                         <p>+998 99 803 52 19</p>
                     </div>
 
                     <div class="method">
-                        <span><i class="far fa-3x fa-envelope"></i></span>
+                        <span data-aos="fade-in"><i class="far fa-3x fa-envelope"></i></span>
                         <p><a href="#">abdurakhimov.sardor@gmail.com</a></p>
                     </div>
 
                     <div class="method">
-                        <span><i class="fab fa-3x fa-telegram"></i></span>
+                        <span data-aos="fade-in"><i class="fab fa-3x fa-telegram"></i></span>
                         <p><a href="#">Contact me on Telgram</a></p>
                     </div>  
                 </div>
@@ -193,6 +207,14 @@
             <p class="copyright">© Copyright Sardor 2020</p>
         </footer>
 
+       
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+              duration:1000,
+              
+          });
+        </script>
     <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>

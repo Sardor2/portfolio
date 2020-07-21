@@ -4,7 +4,6 @@ const body = document.querySelector('body');
 
 let menuOpen = false;
 
-
 toggleButton.addEventListener('click', () => {
     // if(menuOpen) {
     //     toggleButton.classList.remove('open');
@@ -14,7 +13,7 @@ toggleButton.addEventListener('click', () => {
     //     menuOpen = true;
     // }
     toggleButton.classList.toggle('open');
-    
+   
     body.classList.toggle('lock-scroll');
 
     navBar.classList.toggle('active');

@@ -1,7 +1,10 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    
 }
-
+html {
+    margin:0;
+}
 
 body {
     font-family: 'Merriweather Sans', sans-serif;
@@ -10,6 +13,7 @@ body {
     padding:0;
     height: 100%;
     text-align: center;
+    overflow-x: hidden;
 }
 h1,h2,h3 {
     font-family: 'Ubuntu', sans-serif;
@@ -65,6 +69,7 @@ nav li {
 .nav-link {
     color:rgb(180, 180, 180);
     width: 100%;
+    transition: all .3s linear;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -89,6 +94,11 @@ nav li {
 #about-me {
     color:rgb(238, 232, 232);
 }
+.my-img {
+    margin:1em auto;
+    border-radius: 100%;
+    border:3px solid rgb(255, 229, 229);
+}
 .about-title {
     margin:0  0 1em;
     font-size: 1.75rem;
@@ -111,10 +121,13 @@ nav li {
     padding:.5em;
     color:white;
 }
-.about-btn:hover,
-.about-btn:focus {
-    background-color: white;
-    color: #f4623a;
+
+@media (min-width:675px) {
+    .about-btn:hover,
+    .about-btn:focus {
+        background-color: white;
+        color: #f4623a;
+    }
 }
 
 /* Skills */
@@ -137,7 +150,6 @@ nav li {
 /* Showcase */
 
 .showcase-title {
-    
     font-size: 2.5rem;
     font-weight: lighter;
 }
@@ -170,22 +182,64 @@ nav li {
     background-color: #ff5f40;
     border:1px solid  white;
 }
-.goto-project-btn:hover,
-.goto-project-btn:focus {
-    color: #ff5f40;
-    background-color: white;
-    border:1px solid  #ff5f40;
-}
+
 .goto-code-btn {
     border:1px solid #ff5f40;
     color:#ff5f40;
 }
 
-.goto-code-btn:hover,
-.goto-code-btn:focus {
-    color: white;
-    background-color: #ff5f40;
-    border:1px solid white;
+
+@media (min-width:675px) {
+    .goto-project-btn:hover,
+    .goto-project-btn:focus {
+        color: #ff5f40;
+        background-color: white;
+        border:1px solid  #ff5f40;
+    }
+
+    .goto-code-btn:hover,
+    .goto-code-btn:focus {
+        color: white;
+        background-color: #ff5f40;
+        border:1px solid white;
+    }
+}
+/* Contact */
+#contact {
+    color:#fff;
+}
+.contact-title {
+    color:#fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.contact-text {
+    color:rgba(218, 218, 218,0.7);
+    width: 70%;
+}
+.method p {
+    font-size: 1rem;
+    color:rgb(224, 217, 217);
+    cursor: pointer;
+}
+
+.method a {
+    text-decoration: none;
+    color:rgb(224, 217, 217);
+}
+#contact hr {
+    border-color: #fff;
+}
+@media (min-width:675px) {
+    .method p:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Footer */
+.copyright {
+    font-size: 1rem;
+    color:rgb(160, 155, 155);
 }
 
 /* =====Layout===== */
@@ -199,9 +253,12 @@ header {
     background-size: cover;
     padding-bottom: calc(10rem - 4.5rem);
     height: 100vh;
+    min-height: 450px;
+    margin:0em 0;
 }
 .container-header {
     margin-top: 5em;
+    
 }
 /* Navigation */
 nav {
@@ -209,7 +266,7 @@ nav {
     flex-direction: column;
     position: relative;
     align-items: center;
-    background-color: rgba(53, 48, 47,1);   
+    background-color: rgba(53, 48, 47,1);
 }
 body {
     overflow-x: hidden;
@@ -217,7 +274,7 @@ body {
 nav ul {
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 87vh;
     position: absolute;
     left:0;
     top:3rem;
@@ -228,6 +285,7 @@ nav ul {
     padding: 0;
     padding-top: 2em;
     transition: transform 0.5s ease;
+    z-index: 1;
 }
 nav li {
     list-style: none;
@@ -288,7 +346,7 @@ ul a {
     transform: rotate(-45deg) translate(7px,7px);
 }
 .lock-scroll {
-    overflow: hidden;
+    overflow:hidden;
 }
 @media (min-width:675px) {
     header {
@@ -383,9 +441,10 @@ ul a {
     align-items:center;
     margin:3em auto;
 }
+
+
 .project-col {
     width: 100%;
-
 }
 .project-description {
     margin:0;
@@ -400,8 +459,12 @@ ul a {
 @media (min-width:675px) {
     .project {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items:center;
+        
+    }
+    .middle-project {
+        flex-direction: row-reverse;
     }
     .project-col {
         width:45%;
@@ -413,36 +476,9 @@ ul a {
 #contact {
     background-color: #f4623a;
     padding:2em 0;
-    color:#fff;
-}
-.contact-title {
-    color:#fff;
-    font-size: 2.5rem;
-    font-weight: 400;
 }
 .contact-text {
-    color:rgba(218, 218, 218,0.7);
-    width: 70%;
     margin: 1em auto;
-}
-.method p {
-    font-size: 1rem;
-    color:rgb(224, 217, 217);
-    cursor: pointer;
-}
-.method p:hover {
-    
-    text-decoration: underline;
-}
-.method a {
-    text-decoration: none;
-    color:rgb(224, 217, 217);
-}
-.method a:hover {
-   
-}
-#contact hr {
-    border-color: #fff;
 }
 
 .contact-methods {
@@ -471,10 +507,7 @@ footer {
     padding:2em;
     background-color: white;
 }
-.copyright {
-    font-size: 1rem;
-    color:rgb(160, 155, 155);
-}
+
 .social-media {
     display: flex;
     justify-content: space-around;
