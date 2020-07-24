@@ -1,6 +1,7 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navBar = document.querySelector('ul');
 const body = document.querySelector('body');
+const navLinks = document.getElementsByClassName('nav-link');
 
 let menuOpen = false;
 
@@ -17,4 +18,18 @@ toggleButton.addEventListener('click', () => {
     body.classList.toggle('lock-scroll');
 
     navBar.classList.toggle('active');
-})
+});
+
+for (i=0;i<navLinks.length;i++) {
+    navLinks[i].addEventListener('click',() => {
+        navBar.classList.remove('active');
+        toggleButton.classList.remove('open');
+        body.classList.remove('lock-scroll');
+    });
+   
+}
+
+
+var scroll = new SmoothScroll('a[href*="#"] ,button',{
+	speed:800
+}); 

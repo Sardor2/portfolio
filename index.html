@@ -11,13 +11,14 @@
     </head>
 
     <body>
-        <header>
-            <nav data-aos="fade-down">
+        <header id="home">
+            <nav class="navbar" data-aos="fade-down">
                 <img class="signature" src="./img/signature.png" alt="signature">
                 <a  class="toggle-button">
                     <span class="bar"></span>
                 </a>
                 <ul>
+                    <li><a class="nav-link" href="#home">Home</a></li>
                     <li><a class="nav-link" href="#about-me">About</a></li>
                     <li><a class="nav-link" href="#skills">Skills</a></li>
                     <li><a class="nav-link" href="#showcase">Showcase</a></li>
@@ -32,7 +33,7 @@
                 
                <div>
                     <p class="intro-text " data-aos="zoom-in" data-aos-delay="800">Passionate front-end developer</p>
-                    <button class="btn intro-btn">Find out more</button>
+                    <a class="btn intro-btn" href="#showcase">See My Work</a>
                </div>
                
             </div>
@@ -49,14 +50,13 @@
                 
                 <div>
                     <p class="about-text" data-aos="fade-in">
-                        My name is Sardor and I`m a passionate front-end developer.In particular,
-                        I`m pretty keen on working with React.In addition,I`m also interested in back-end web development,things like Node,Mongodb 
-                        ,but for the next couple years I plan to focus on front-end part ,escpecially React.
-            
+                        My name is Sardor and I`m a passionate front-end developer.
                     </p>
-                    <button class="btn about-btn"><i class="arrow-down fa-2x fal fa-arrow-down"></i></button>
+                   
                 </div>
+                
             </div>
+            <a  class="btn about-btn" href="#skills"><i class="arrow-down fa-3x fal fa-arrow-down"></i></a>
         </section>
 
         <!--Skills-->
@@ -220,6 +220,7 @@
               
           });
         </script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
