@@ -30,6 +30,10 @@ a {
 section {
     padding: 1em;
 }
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
 .container {
     width: 1050px;
     max-width: 90%;
@@ -109,9 +113,7 @@ nav li {
 }
 .about-title {
     margin:0  0 1em;
-    font-size: 1.75rem;
     color:rgb(241, 240, 240);
-    font-weight: 400;
 }
 .about-text {
     margin:2em auto 2.5em;
@@ -136,10 +138,7 @@ nav li {
     width: 128px;
 }
 
-.skills-title {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
+
 
 .skill-title {
     font-size: 1.250rem;
@@ -147,8 +146,7 @@ nav li {
 /* Showcase */
 
 .showcase-title {
-    font-size: 2.5rem;
-    font-weight: lighter;
+
 }
 
 .project-title {
@@ -207,8 +205,6 @@ nav li {
 }
 .contact-title {
     color:#fff;
-    font-size: 2.5rem;
-    font-weight: 400;
 }
 .contact-text {
     color:rgba(240, 230, 230, 0.7);
