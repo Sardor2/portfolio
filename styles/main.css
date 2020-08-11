@@ -274,7 +274,7 @@ nav {
     z-index: 1;
     width: 100%;
     align-items: center;
-    background-color: rgba(53, 48, 47,0.9);
+    background-color: rgba(53, 48, 47,0.91);
 }
 body {
     overflow-x: hidden;
