@@ -160,7 +160,7 @@ nav li {
 .project-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgb(41, 41, 41);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .buttons a {
@@ -184,15 +184,13 @@ nav li {
 
 
 @media (min-width:675px) {
-    .goto-project-btn:hover,
-    .goto-project-btn:focus {
+    .goto-project-btn:hover {
         color: #ff5f40;
         background-color: white;
         border:1px solid  #ff5f40;
     }
 
-    .goto-code-btn:hover,
-    .goto-code-btn:focus {
+    .goto-code-btn:hover {
         color: white;
         background-color: #ff5f40;
         border:1px solid white;
