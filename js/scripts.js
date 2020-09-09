@@ -15,10 +15,10 @@ toggleButton.addEventListener('click', () => {
     // }
     toggleButton.classList.toggle('open');
    
-    body.classList.toggle('lock-scroll');
-
     navBar.classList.toggle('active');
 });
+
+document.querySelector('body')
 
 for (i=0;i<navLinks.length;i++) {
     navLinks[i].addEventListener('click',() => {
@@ -31,5 +31,5 @@ for (i=0;i<navLinks.length;i++) {
 
 
 var scroll = new SmoothScroll('a[href*="#"] ,button',{
-	speed:800
+	speed:400
 }); 
