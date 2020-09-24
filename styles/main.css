@@ -51,6 +51,7 @@ section h2 {
     font-weight: bold;
     cursor: pointer;
 }
+
 hr {
     max-width: 70px;
     border:none;
@@ -84,7 +85,7 @@ nav li {
 }
 .nav-link:hover,
 .nav-link:focus {
-    color:rgb(240, 233, 233)
+    color:rgba(226, 112, 19, 0.89);
 }
 
 
@@ -275,7 +276,7 @@ nav {
     z-index: 1;
     width: 100%;
     align-items: center;
-    background-color: rgba(53, 48, 47,0.91);
+    background-color: rgba(0, 0, 0, 0.91);
 }
 body {
     overflow-x: hidden;
@@ -286,8 +287,8 @@ nav ul {
     height: auto;
     position: absolute;
     left:0;
-    top:3.59rem;
-    background-color: rgba(53, 48, 47,0.9);  
+    top:3.55rem;
+    background-color: rgba(0, 0, 0, 0.9);  
     transform: translateX(-100%);
     flex-direction: column;
     align-items: left;
